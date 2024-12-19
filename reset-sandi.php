@@ -5,15 +5,18 @@ include "database.php";
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
     if (isset($_POST['new_password'])) {
+        if (!isset($_POST['email'])) {
+            header('Location: lupa-password.php');
+        }
         $email = $_POST['email'];
 
         $new_password = $_POST['new_password'];
         $ulang_password = $_POST['ulang_password'];
-        
+
         if ($new_password === $ulang_password) {
-            $query = "UPDATE users SET password='$new_password' WHERE email='$email'";
+            $query = "UPDATE users SET password='$new_password' WHERE email='$_POST[email]'";
+            ;
             if (mysqli_query($conn, $query)) {
                 $message = "Password berhasil direset.";
                 header("Location: login.php?reset-success=true");
@@ -45,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
         <form action="" method="POST">
             <!-- Kirim email ke reset_sandi_process.php -->
-            <input type="hidden" name="email" value="<?php echo $email; ?>">
+            <input type="hidden" name="email" value="<?= $_POST['email'] ?>">
             <label for="new_password">Kata Sandi Baru :</label>
             <input type="password" id="new_password" name="new_password" required>
             <label for="ulang_password">Masukkan Ulang Kata Sandi :</label>

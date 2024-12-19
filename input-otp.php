@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
         <form action="reset-sandi.php" method="POST">
             <!-- Kirim email sebagai hidden input -->
-            <input type="hidden" name="email" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+            <input type="hidden" name="email" value="<?= $_POST['email'] ?>">
             <div class="otp-inputs">
                 <input type="text" name="otp1" maxlength="1" style="margin-left: 120px;" required>
                 <input type="text" name="otp2" maxlength="1" required>
