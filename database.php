@@ -6,9 +6,9 @@ $dbname = "cupu_travel";
 
 // Create connection
 
+if (!isset($conn)) {
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-// if (!isset($conn)) {
-// }
+}
 
 // Check connection
 if (!$conn) {

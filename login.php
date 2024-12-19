@@ -16,6 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = "Invalid email or password";
     }
 }
+
+$message = "";
+if (isset($_GET['reset-success'])) {
+   $message = "Password anda berhasil di reset, silahkan login menggunakan email dan password baru";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,12 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="password" class="form-label">Password:</label>
             <input type="password" class="form-control bg-black bg-opacity-10 text-white" id="password" name="password" placeholder="**********">
          </div>
-         <div class="d-flex justify-content-between mb-3">
+         <?= $message ?>
+         <div class="d-flex justify-content-between my-3">
             <div>
                <input type="checkbox" id="remember" class="form-check-input">
                <label for="remember" class="form-check-label">Remember me</label>
             </div>
-            <a class="text-white text-decoration-none fw-bold" href="#">Forgot Password?</a>
+            <a class="text-white text-decoration-none fw-bold" href="lupa-password.php">Forgot Password?</a>
          </div>
          <button type="submit" class="btn btn-light fw-bold w-100 mb-3">Masuk</button>
          <p>Or connect with</p>
