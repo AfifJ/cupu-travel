@@ -65,7 +65,11 @@ if (isset($_GET['logout'])) {
                      Pesan tiket wisata dengan mudah dan cepat
                   </h4>
                   <h1>Telusuri setiap Destinasi</h1>
-                  <button class="btn btn-light fw-bold mt-4">Cari Tempat Wisata</button>
+               <?php if (!isset($_SESSION['email'])): ?>
+                  <a href="login.php" class="btn btn-light fw-bold mt-4">Cari Tempat Wisata</a>
+               <?php else: ?>
+                  <a href="cari.php" class="btn btn-light fw-bold mt-4">Cari Tempat Wisata</a>
+               <?php endif; ?>
                </div>
             </div>
          </div>
