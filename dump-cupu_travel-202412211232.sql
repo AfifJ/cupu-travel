@@ -19,9 +19,6 @@
 -- Table structure for table `destinasi`
 --
 
-CREATE DATABASE cupu_travel;
-USE cupu_travel;
-
 DROP TABLE IF EXISTS `destinasi`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -76,7 +73,7 @@ CREATE TABLE `destinasi_gambar` (
 
 LOCK TABLES `destinasi_gambar` WRITE;
 /*!40000 ALTER TABLE `destinasi_gambar` DISABLE KEYS */;
-INSERT INTO `destinasi_gambar` VALUES (1,16,'borobudur_1.jpg','2024-12-20 14:41:49'),(2,16,'borobudur_2.jpg','2024-12-20 14:41:49'),(3,16,'borobudur_3.jpg','2024-12-20 14:41:49'),(4,17,'taman_pintar_1.jpg','2024-12-20 14:41:55'),(5,17,'taman_pintar_2.jpg','2024-12-20 14:41:55'),(6,18,'benteng_vredeburg_1.jpg','2024-12-20 14:41:58'),(7,18,'benteng_vredeburg_2.jpg','2024-12-20 14:41:58'),(8,19,'museum_merapi_1.jpg','2024-12-20 14:42:14'),(9,19,'museum_merapi_2.jpg','2024-12-20 14:42:14'),(10,20,'keraton_yogya_1.jpg','2024-12-20 14:42:17'),(11,20,'keraton_yogya_2.jpg','2024-12-20 14:42:17'),(12,21,'taman_sari_1.jpg','2024-12-20 14:42:21'),(13,21,'taman_sari_2.jpg','2024-12-20 14:42:21'),(14,22,'monjali_1.jpg','2024-12-20 14:42:25'),(15,22,'monjali_2.jpg','2024-12-20 14:42:25'),(16,23,'suraloka_zoo_1.jpg','2024-12-20 14:42:28'),(17,23,'suraloka_zoo_2.jpg','2024-12-20 14:42:28'),(18,24,'taman_kaliurang_1.jpg','2024-12-20 14:42:30'),(19,24,'taman_kaliurang_2.jpg','2024-12-20 14:42:30'),(20,30,'bukit_paralayang_1.jpg','2024-12-20 14:42:40'),(21,30,'bukit_paralayang_2.jpg','2024-12-20 14:42:40'),(22,14,'gembira_loka_1.jpg','2024-12-20 14:49:25'),(23,14,'gembira_loka_2.jpg','2024-12-20 14:49:25'),(24,14,'gembira_loka_3.jpg','2024-12-20 14:49:25'),(25,15,'prambanan_1.jpg','2024-12-20 14:49:30'),(26,15,'prambanan_2.jpg','2024-12-20 14:49:30'),(27,15,'prambanan_3.jpg','2024-12-20 14:49:30');
+INSERT INTO `destinasi_gambar` VALUES (1,16,'https://allthatsinteresting.com/wordpress/wp-content/uploads/2020/04/candi-borobudur.jpg','2024-12-20 14:41:49'),(2,16,'https://lp-cms-production.imgix.net/2019-06/d7ecf43d5c78652daaab5e0256d1bc50-prambanan-temple.jpg?fit=crop&ar=1:1&w=1200&auto=format&q=75','2024-12-20 14:41:49'),(3,16,'https://lp-cms-production.imgix.net/2019-06/f4024c571e5e09ce5e4049bc181500b1-borobudur-temple.jpg?w=1920&h=640&fit=crop&crop=faces,edges&auto=format&q=75','2024-12-20 14:41:49'),(4,17,'https://asset.kompas.com/crops/po9ORxXE7qWTPRdZ4GAKjFuzSqQ=/0x0:3872x2581/1200x800/data/photo/2022/06/21/62b12111655e6.jpg','2024-12-20 14:41:55'),(5,17,'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01j1harh7mqkcszj8r3fkwrdkk.jpg','2024-12-20 14:41:55'),(6,18,'https://alodiatour.com/wp-content/uploads/2018/11/lokasi-museum-benteng-vredeburg.jpg','2024-12-20 14:41:58'),(7,18,'https://balistarisland.com/wp-content/uploads/2016/09/fortvredeburgmuseum3-800x600.jpg','2024-12-20 14:41:58'),(8,19,'https://cdn.forevervacation.com/uploads/attraction/merapi-volcano-museum-2852.jpg?tr=w-1235,h-354','2024-12-20 14:42:14'),(9,19,'https://lh5.googleusercontent.com/p/AF1QipOssfk1ezNOZ8ckfiHFd8gb1cj710KJ7CI6bSLx=w1080-k-no','2024-12-20 14:42:14'),(10,20,'https://salsawisata.com/wp-content/uploads/2021/08/Gapura-Gladag-Pangurakan-Keraton-Jogja.jpg','2024-12-20 14:42:17'),(11,20,'https://asset.kompas.com/crops/FJj2g3cYzOXaqeOQ9SmO64yDt5Y=/59x0:648x393/750x500/data/photo/2020/12/09/5fd0242f25315.jpg','2024-12-20 14:42:17'),(12,21,'https://i0.wp.com/thetravelauthor.com/wp-content/uploads/2021/08/TamanSariJogja.jpg?resize=600,800&ssl=1','2024-12-20 14:42:21'),(13,21,'https://www.yogyes.com/id/yogyakarta-tourism-object/other/tamansari/1.jpg','2024-12-20 14:42:21'),(14,22,'https://i2.wp.com/yogyakarta-tours.com/wp-content/uploads/2020/03/Monjali-source-jogjaseni.jpg?w=1080&ssl=1','2024-12-20 14:42:25'),(15,22,'https://monjali-jogja.com/wp-content/uploads/2021/10/Monjali_07-1024x461.jpg','2024-12-20 14:42:25'),(16,23,'https://salsawisata.com/wp-content/uploads/2022/11/wahana-di-Suraloka-Zoo.jpg','2024-12-20 14:42:28'),(17,23,'https://travelspromo.com/wp-content/uploads/2022/05/Anak-anak-bermain-di-wahana-permainan-Suraloka-Zoo.jpg','2024-12-20 14:42:28'),(18,24,'https://o-cdn-cas.sirclocdn.com/parenting/images/taman-wisata-kaliurang-2.width-800.format-webp.webp','2024-12-20 14:42:30'),(19,24,'https://cdn0-production-images-kly.akamaized.net/riCWgVsWbr7cfM0fWVuu4frcm1g=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2753900/original/097547600_1552887652-iStock-1079231486.jpg','2024-12-20 14:42:30'),(20,30,'https://www.wsrentaljogja.com/wp-content/uploads/2018/11/@ipxcex.jpg','2024-12-20 14:42:40'),(21,30,'https://homestaydijogja.net/wp-content/uploads/2024/02/Bukit-Paralayang-Watugupit-2.jpg','2024-12-20 14:42:40'),(22,14,'https://travelspromo.com/wp-content/uploads/2019/03/ATV-glzoojogja-e1553493212483.jpg','2024-12-20 14:49:25'),(23,14,'https://www.goersapp.com/blog/wp-content/uploads/2024/08/Hewan-di-Gembira-Loka-Zoo.webp','2024-12-20 14:49:25'),(24,14,'https://www.yogyes.com/id/yogyakarta-tourism-object/other/gembira-loka/1.jpg','2024-12-20 14:49:25'),(25,15,'https://lp-cms-production.imgix.net/2019-06/77969c9a8e4e8aa83a5abbf46ad86f1a-borobudur-temple.jpg?fit=crop&ar=1:1&w=1200&auto=format&q=75','2024-12-20 14:49:30'),(26,15,'https://media.gettyimages.com/id/120220241/photo/prambanan.jpg?s=612x612&w=0&k=20&c=jpTQ_CdlFvI1jCk86zz1UprpOrK_XJDkXl2yhNSaQWA=','2024-12-20 14:49:30'),(27,15,'https://lp-cms-production.imgix.net/2019-06/5e667676eff4869feca15dbc8da5e099-sono-budoyo-museum.jpg?fit=crop&ar=1:1&w=1200&auto=format&q=75','2024-12-20 14:49:30');
 /*!40000 ALTER TABLE `destinasi_gambar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +98,7 @@ CREATE TABLE `transaksi` (
   PRIMARY KEY (`id`),
   KEY `destinasi_id` (`destinasi_id`),
   CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`destinasi_id`) REFERENCES `destinasi` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -110,7 +107,7 @@ CREATE TABLE `transaksi` (
 
 LOCK TABLES `transaksi` WRITE;
 /*!40000 ALTER TABLE `transaksi` DISABLE KEYS */;
-INSERT INTO `transaksi` VALUES (1,'afif','afif@gmail.com','088',3,'2024-12-11',225000.00,'Mandiri',18,'2024-12-20 16:26:30'),(2,'afif','afif@gmail.com','888',4,'2024-12-09',300000.00,'Mandiri',18,'2024-12-20 16:27:01'),(3,'afif','afif@gmail.com','88',8,'2024-12-16',600000.00,'',18,'2024-12-20 16:28:42'),(4,'2','2@gmail.com','3',3,'2024-12-16',225000.00,'',14,'2024-12-20 16:29:44'),(5,'1','1@f.com','1',1,'2024-12-15',75000.00,'GoPay',14,'2024-12-20 16:35:09');
+INSERT INTO `transaksi` VALUES (1,'afif','afif@gmail.com','088',3,'2024-12-11',225000.00,'Mandiri',18,'2024-12-20 16:26:30'),(2,'afif','afif@gmail.com','888',4,'2024-12-09',300000.00,'Mandiri',18,'2024-12-20 16:27:01'),(3,'afif','afif@gmail.com','88',8,'2024-12-16',600000.00,'',18,'2024-12-20 16:28:42'),(4,'2','2@gmail.com','3',3,'2024-12-16',225000.00,'',14,'2024-12-20 16:29:44'),(5,'1','1@f.com','1',1,'2024-12-15',75000.00,'GoPay',14,'2024-12-20 16:35:09'),(6,'rahel','rahel@gmail.com','888',12,'2024-12-18',900000.00,'BCA',15,'2024-12-21 03:42:21'),(7,'1','12@g.com','1',1,'2024-12-09',75000.00,'BCA',14,'2024-12-21 03:49:23'),(8,'1','12@g.com','1',1,'2024-12-09',75000.00,'BCA',14,'2024-12-21 03:50:36'),(9,'1','12@g.com','1',1,'2024-12-09',75000.00,'BCA',14,'2024-12-21 03:50:55'),(10,'1','12@g.com','1',1,'2024-12-09',75000.00,'BCA',14,'2024-12-21 03:51:04'),(11,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:52:39'),(12,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:52:52'),(13,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:52:56'),(14,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:53:04'),(15,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:53:20'),(16,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:53:30'),(17,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:53:41'),(18,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:55:17'),(19,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:57:51'),(20,'1','12@g.com','1',1,'2024-12-09',75000.00,'DANA',14,'2024-12-21 03:59:03'),(21,'rahel','rahel@gmail.com','08973738287387',3,'2024-12-02',225000.00,'DANA',14,'2024-12-21 04:07:04'),(22,'rahel','rahel@gmail.com','0873y847y2947928',3,'2024-12-03',225000.00,'DANA',14,'2024-12-21 04:08:31'),(23,'gigi','gigi@gmail.com','734735726526',3,'2024-12-09',225000.00,'DANA',14,'2024-12-21 04:46:00');
 /*!40000 ALTER TABLE `transaksi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -125,9 +122,11 @@ CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `phone` varchar(100) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,7 +135,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'test@gmail.com','test'),(2,'lagi@gmail.com','lagi');
+INSERT INTO `users` VALUES (1,'test@gmail.com','test','98','test'),(2,'lagi@gmail.com','lagi',NULL,NULL),(3,'gigi@gmail.com','gigi','0876736374784','rahel');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -153,4 +152,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-20 23:37:02
+-- Dump completed on 2024-12-21 12:32:33
