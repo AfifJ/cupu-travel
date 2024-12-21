@@ -3,9 +3,9 @@ session_start();
 include 'database.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
+    $name = $_POST['name'] ?? '';
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
+    $phone = $_POST['phone'] ?? '';
     $ticket_count = $_POST['ticket_count'];
     $selected_date = date('Y-m-d', strtotime($_POST['selected_date']));
     $total_payment = $_POST['total_payment'];
@@ -14,9 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "INSERT INTO transaksi (name, email, phone, ticket_count, selected_date, total_payment, payment_method, destinasi_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $insert_id = $conn->insert_id;
     $stmt->bind_param("sssisdsi", $name, $email, $phone, $ticket_count, $selected_date, $total_payment, $payment_method, $destinasi_id);
     $stmt->execute();
+    $insert_id = $conn->insert_id;
     $stmt->close();
     $conn->close();
 } else {
@@ -52,6 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="col text-muted"><?= $payment_method ?></div>
                 </div>
             </div>
+        </div>
+        <div class="w-100 text-center my-5">
+            <a href="berhasil-detail.php?id=<?= $insert_id ?>" class="w-100 text-center my-5">
+                Lihat Detail
+            </a>
         </div>
     </div>
 

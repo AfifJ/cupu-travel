@@ -39,21 +39,8 @@ $conn->close();
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="/images/logo.png" height="32" alt="Logo" class="d-inline-block align-text-top">
-            </a>
-            <?php if (!isset($_SESSION['email'])): ?>
-                <a class="navbar-brand" href="login.php">
-                    <button type="button" class="btn btn-dark">Masuk</button>
-                </a>
-            <?php else: ?>
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                    data-bs-target="#logoutModal">Keluar</button>
-            <?php endif; ?>
-        </div>
-    </nav>
+<?php include "navbar.php" ?>
+
 
     <div class="container fs-4 d-flex align-items-center mt-5 mb-4">
         <a href="<?= isset($_GET['query']) ? "cari.php" : "index.php"?>">

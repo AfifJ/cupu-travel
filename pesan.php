@@ -20,15 +20,8 @@ if (isset($_GET['logout'])) {
 </head>
 
 <body>
-   <nav class="navbar bg-body-tertiary">
-      <div class="container">
-         <a class="navbar-brand" href="#">
-            <img src="/images/logo.png" height="32" alt="Logo" class="d-inline-block align-text-top">
-         </a>
+<?php include "navbar.php" ?>
 
-         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#logoutModal">Keluar</button>
-      </div>
-   </nav>
    <div class="container mt-5">
       <h1 class="text-center mb-5">Menu Pembelian Tiket Wisata Gembira Loka</h1>
       <form action="bayar.php" method="POST">

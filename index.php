@@ -18,20 +18,7 @@ if (isset($_GET['logout'])) {
 </head>
 
 <body>
-   <nav class="navbar bg-body-tertiary">
-      <div class="container">
-         <a class="navbar-brand" href="#">
-            <img src="/images/logo.png" height="32" alt="Logo" class="d-inline-block align-text-top">
-         </a>
-         <?php if (!isset($_SESSION['email'])): ?>
-            <a class="navbar-brand" href="login.php">
-               <button type="button" class="btn btn-dark">Masuk</button>
-            </a>
-         <?php else: ?>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#logoutModal">Keluar</button>
-         <?php endif; ?>
-      </div>
-   </nav>
+  <?php include "navbar.php" ?>
 
    <!-- Logout Confirmation Modal -->
    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">

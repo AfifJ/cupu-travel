@@ -1,9 +1,9 @@
 <?php
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
+    $name = $_POST['name'] ?? '';
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
+    $phone = $_POST['phone'] ?? '';
     $ticket_count = $_POST['ticket_count'];
     $selected_date = $_POST['selected_date'];
     $destinasi_id = $_POST['destinasi_id'];
